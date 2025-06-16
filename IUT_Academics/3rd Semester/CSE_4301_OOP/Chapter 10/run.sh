@@ -1,0 +1,1 @@
+g++ test.cpp -o a && ./a.exe rm a.exe

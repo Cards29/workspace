@@ -1,0 +1,13 @@
+Design phase:
+given high level shit(initial phase),
+write the conceptual-design phase
+and then implement.
+mid syll: up to ch 6(ch5 not included)
+
+relationship set.
+roles.
+multi-valued variable means m>=0 (IT COULD BE 0 AS WELL)
+there will be one or two questions from ER Diagram for composite, multi and derived attributes
+
+Always write 'CREATE OR REPLACE' for creating any object
+

@@ -1,0 +1,115 @@
+Gari Ache App – Page-by-Page Structure
+Page 1: Organization Selection
+Dropdown to select your university/institute
+
+Button: “Continue”
+
+Page 2: Email Verification
+Input field: Educational email (e.g., example@iut-dhaka.edu)
+
+Verification via code/link
+
+Page 3: Identity Upload + Profile Setup
+Upload photo of student ID card
+
+Auto-fill or manual entry:
+
+Name
+
+Department
+
+Year
+
+Gender
+
+Location input (map or manual)
+
+Dropdowns:
+
+Hall resident? (Yes/No)
+
+Commute frequency
+
+Role: Wants Ride, Shares Ride, Both
+
+Car type (if ride-sharer)
+
+Needs luggage space? (if ride-seeker)
+
+Preferred payment (Free, Split Cost, bKash, Cash)
+
+Some questions appear later like YouTube-style prompts
+
+Page 4: Home Page / Main Dashboard
+Google Map view at top (from current MainActivity)
+
+"Where to?" search bar
+
+Below that:
+
+⬜ "Free / Split Cost" toggle
+
+🟩 “Book a Ride – headache-free travel in advance” button
+
+Bottom floating bar with:
+
+🧳 Services (future parcel feature)
+
+📖 Activities (previous ride history)
+
+👤 Account (view/edit profile)
+
+Page 5: Ride Options Screen
+List of available cars with:
+
+Pickup point
+
+Car type
+
+Price / split status
+
+Chat button (in-app messaging)
+
+Book ride button
+
+Page 6: Report to Authority
+Options:
+
+📞 Direct call to police/authority
+
+📧 Send a complaint email with:
+
+Ride details auto-attached
+
+Current location from map
+
+Page 7: Ride History (Activities)
+List of all rides user took/shared
+
+Buttons for:
+
+View ride details
+
+Rate driver/rider
+
+Repeat ride
+
+Page 8: Services (Future Placeholder)
+Placeholder screen for:
+
+Parcel delivery
+
+Food sharing
+
+Campus errand help
+
+Page 9: My Account
+All user info:
+
+Profile photo
+
+Contact email
+
+Role, car type, preferences
+
+Edit profile button

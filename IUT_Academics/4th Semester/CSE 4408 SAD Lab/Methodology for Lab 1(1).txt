@@ -1,0 +1,39 @@
+Here’s a direct response for Task 1.4 of Lab 1 from your taskbook, using your IUT Carpooling System idea:
+
+📝 1.4 Evaluate and Select Development Methodology
+Selected Methodology: Agile
+
+🎯 Organization Context
+Our project targets the IUT community—students commuting between IUT and Dhaka. The stakeholders are students (both car providers and riders). The system will be used voluntarily, with low formality and dynamic user preferences (e.g., ride availability, preferred times, costs).
+
+📌 Evaluation of Methodologies
+
+1. ✅ Agile (Chosen)
+
+* Agile is ideal for our small, student-driven development team.
+* Requirements are likely to evolve as we gather real feedback from peers.
+* We aim to quickly build a basic MVP and improve it based on actual use.
+* Agile supports short development cycles (sprints) and rapid feedback, which aligns with our iterative improvement goals.
+* As students, we can frequently communicate and adapt to new features during development.
+* The lightweight documentation is a good fit since our stakeholders are informal, and the system isn’t heavily regulated.
+
+📌 Why Not the Others:
+
+2. ❌ SDLC (Waterfall)
+
+* SDLC requires very well-defined requirements from the beginning and is not flexible to change.
+* The rigid phase structure (requirements → design → implementation → testing) delays feedback until late in the project.
+* For a new idea like carpooling at IUT—where user needs and expectations are still unclear—this lack of adaptability is a major drawback.
+* Documentation-heavy process is unnecessary for our informal, small-scope student platform.
+
+3. ❌ O-O (Spiral Method)
+
+* The Spiral model emphasizes risk assessment and multiple planning iterations per phase—making it more suitable for high-risk, large-scale, or critical systems.
+* Our project has minimal budget, limited risks, and a focused scope.
+* Spiral is overkill: we don’t need formal risk analysis at every step and cannot afford the repeated costs of revisiting phases.
+* While Object-Oriented principles (e.g., modularity, encapsulation) will be used in coding, the Spiral method's structure doesn’t suit our lightweight, fast-paced student environment.
+
+🧠 Conclusion:
+Agile is the most appropriate methodology for our IUT Carpool system. It enables rapid prototyping, flexibility in handling changing needs, and frequent peer feedback—all essential for a community-based, evolving student solution. SDLC is too rigid, and Spiral is too heavyweight for our goals.
+
+Would you like me to turn this into a slide-ready summary or report paragraph format?

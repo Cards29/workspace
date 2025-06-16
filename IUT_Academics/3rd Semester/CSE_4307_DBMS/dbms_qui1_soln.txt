@@ -1,0 +1,14 @@
+3.ii
+
+SELECT A.ID, A.NAme, A.gpa
+FROM
+(SELECT ID,Nmae,GPA
+FROM Stuents
+Order By gpa desc) A
+where ROWNUM = 1
+UNION
+SELECT A.ID, A.NAme, A.gpa
+FROM
+(SELECT ID,Nmae,GPA
+FROM Stuents
+Order By gpa) A;
