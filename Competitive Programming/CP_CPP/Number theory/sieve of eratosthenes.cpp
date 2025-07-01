@@ -7,15 +7,14 @@ typedef set<ll> si;
 
 #define cy cout<<"YES\n"
 #define cn cout<<"NO\n"
-
-vector<ll> prime(1001, 1);
-
+ll N = 1e6 + 9;
+vector<ll> prime(N, 1);
 void sieve_of_eratosthenes() {
 	prime[0] = 0;
 	prime[1] = 0;
-	for (ll i = 2; i < 1001; i++) {
+	for (ll i = 2; i < N; i++) {
 		if (prime[i] == 1) {
-			for (ll j = i * i; j < 1001; j += i) {
+			for (ll j = i * i; j < N; j += i) {
 				prime[j] = 0;
 			}
 		}
@@ -24,7 +23,7 @@ void sieve_of_eratosthenes() {
 
 void solve() {
 	sieve_of_eratosthenes();
-	for (ll i = 0; i < 1001; i++) {
+	for (ll i = 0; i < N; i++) {
 		if (prime[i])
 			cout << i << ' ';
 	}
