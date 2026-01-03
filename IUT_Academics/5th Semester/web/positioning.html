@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demonstration</title>
+    <!-- Load Tailwind CSS for simple styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for demonstration */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .container-box {
+            min-height: 200px; /* Give height to show content flow */
+            border: 3px solid;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            /* Important: We define the custom colors here */
+            --parent-color: #3b82f6; /* blue-500 */
+            --child-color: #ef4444; /* red-500 */
+            --fixed-color: #10b981; /* emerald-500 */
+        }
+        .positioned-child {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fixed element specific style */
+        .fixed-element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--fixed-color);
+            z-index: 100;
+        }
+
+        /* Utility to make a container scrollable for the 'fixed' test */
+        #scrollable-area {
+            height: 400px; /* Reduced height to force a scrollbar */
+            overflow-y: scroll;
+            padding-right: 15px; /* Compensate for scrollbar */
+        }
+
+        .h-800px {
+            height: 800px; /* Content taller than scrollable area */
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">CSS Position Property Demo</h1>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- EXAMPLE 1: STATIC (Default) -->
+    <!-- ---------------------------------------------------- -->
+    <h2 class="text-2xl font-semibold mb-3 mt-8">1. <code class="text-blue-600">position: static</code> (The Default)</h2>
+    <p class="text-gray-600 mb-4">Elements are in the normal flow. <code class="font-mono">top</code>, <code class="font-mono">left</code>, etc., are ignored.</p>
+    
+    <div class="container-box border-gray-400">
+        <div class="bg-gray-700 text-white p-3 rounded-md mb-2">Static Parent (<code class="font-mono">position: static</code>)</div>
+        
+        <!-- Child is also static, will flow normally -->
+        <div class="positioned-child bg-gray-500">
+            Static Child
+        </div>
+        
+        <p class="mt-4">This paragraph flows right after the static child.</p>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- EXAMPLE 2: RELATIVE -->
+    <!-- ---------------------------------------------------- -->
+    <h2 class="text-2xl font-semibold mb-3 mt-8">2. <code class="text-blue-600">position: relative</code></h2>
+    <p class="text-gray-600 mb-4">The element is shifted from its normal position, but **it still reserves its original space** in the flow.</p>
+
+    <div class="container-box border-blue-500">
+        <div class="bg-blue-500 text-white p-3 rounded-md mb-4">Relative Parent (<code class="font-mono">position: static</code> - Default)</div>
+
+        <!-- This element is shifted 20px down and 20px right from where it should be -->
+        <div class="positioned-child bg-red-500 relative top-5 left-5 z-10">
+            Relative Child
+        </div>
+
+        <p class="mt-4">
+            Notice how this paragraph starts where the **Relative Child's original space was** (not where the element visually moved to). Relative positioning preserves space.
+        </p>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- EXAMPLE 3: ABSOLUTE (Relative Parent is key) -->
+    <!-- ---------------------------------------------------- -->
+    <h2 class="text-2xl font-semibold mb-3 mt-8">3. <code class="text-blue-600">position: absolute</code></h2>
+    <p class="text-gray-600 mb-4">The element is removed from the flow and positioned relative to its nearest <strong class="font-bold">positioned ancestor</strong>.</p>
+
+    <div class="container-box border-blue-500 relative">
+        <div class="bg-blue-500 text-white p-3 rounded-md mb-4">Relative Parent (<code class="font-mono">position: relative</code>)</div>
+        
+        <!-- This child is absolute, so it uses the 'Relative Parent' as its reference point. -->
+        <div class="positioned-child bg-red-500 absolute top-0 right-0">
+            Absolute Child
+        </div>
+        
+        <p class="pt-10">
+            This paragraph ignores the Absolute Child and moves up to occupy the empty space left by its removal from the flow. The Absolute Child is positioned relative to the blue parent's borders.
+        </p>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- EXAMPLE 4: FIXED (Viewport reference & Scrolling) -->
+    <!-- ---------------------------------------------------- -->
+    <h2 class="text-2xl font-semibold mb-3 mt-8">4. <code class="text-blue-600">position: fixed</code></h2>
+    <p class="text-gray-600 mb-4">The element is removed from the flow and positioned relative to the <strong class="font-bold">Viewport</strong>. **Scroll the box below** to see the effect.</p>
+
+    <div id="scrollable-area" class="container-box border-emerald-500 overflow-y-scroll">
+        <div class="bg-gray-200 p-4 sticky top-0 z-50 rounded-lg shadow-md">
+            This area is internally scrollable.
+        </div>
+        <div class="h-800px p-4">
+            <p>This tall content forces the container to scroll.</p>
+            <p class="mt-8 text-sm text-gray-500">
+                The **Fixed Button** is attached to the main **browser window** (viewport), not this smaller scrollable box. You will see it outside and above this entire section, and it won't move when this box scrolls, but it *will* move if you scroll the entire web page (which you can't do inside this preview, but trust me, it's fixed to the browser frame!).
+            </p>
+            <div class="mt-12 p-8 bg-pink-100 rounded-lg">Scroll Down...</div>
+            <div class="mt-12 p-8 bg-pink-200 rounded-lg">Keep Scrolling...</div>
+            <div class="mt-12 p-8 bg-pink-300 rounded-lg">Almost there...</div>
+            <div class="mt-12 p-8 bg-pink-400 rounded-lg">Bottom of Content.</div>
+        </div>
+    </div>
+    
+    <!-- This fixed element is placed outside the scrolling container and will remain in the bottom-right corner of the whole browser window -->
+    <div class="positioned-child fixed-element flex items-center justify-center">
+        Fixed Button
+    </div>
+
+
+</body>
+</html>

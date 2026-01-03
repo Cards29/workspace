@@ -1,0 +1,100 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+Previous Year Online Classes of IUT
+==================================================================================
+Math 4341 (Linear Algebra)
+https://youtube.com/playlist?list=PLXgmxVSv2jDiAgkX9_qiMGNDyAOC3cbvI&feature=shared
+
+Section 1
+==================================================================================
+CSE 4301 (Object Oriented Programming)
+https://youtube.com/playlist?list=PLXgmxVSv2jDhVlyqcoHp0weWAQuD4Fqfm&feature=shared
+
+CSE 4302 (Object Oriented Programming Lab)
+https://youtube.com/playlist?list=PLXgmxVSv2jDha1AGwiA92SB_wPcK4ALzG&feature=shared
+
+CSE 4303 (Data Structures)
+https://youtube.com/playlist?list=PLXgmxVSv2jDjJkFaVZnJBc71mhimJOB56&feature=shared
+
+CSE 4305 (Computer Organization and Architecture)
+https://youtube.com/playlist?list=PLXgmxVSv2jDjmVJrkdzBRgH5a31K3vqzJ&feature=shared
+
+CSE 4307 (Database Management System)
+https://youtube.com/playlist?list=PLXgmxVSv2jDi4Qzvi_nA5f7Cvl9AUN8w7&feature=shared
+
+CSE 4308 (Database Management Systems Lab)
+https://youtube.com/playlist?list=PLXgmxVSv2jDhBrgbWcun3VD47Pw3zKaSM&feature=shared
+
+EEE 4383 (Electronic Devices and Circuits)
+https://youtube.com/playlist?list=PLXgmxVSv2jDinZAYTIL0nKFh8mW4aB4w0&feature=shared
+
+EEE 4384 (Electronic Devices and Circuits Lab)
+https://youtube.com/playlist?list=PLXgmxVSv2jDiaF0uMc2mCrijWlxfCw4E_&feature=shared
+
+
+
+
+Section 2
+==================================================================================
+CSE 4301 - Faisal Hossain
+https://youtube.com/playlist?list=PLIEzhyB68OwYIlavYysDXfo72chyE5knD&feature=shared
+
+CSE 4303 - Sabbir Ahamed
+https://youtube.com/playlist?list=PLIEzhyB68OwZ7kRi-aCAQmHxHbEsPJtqB&feature=shared
+
+CSE 4305 - Hamjajul Ashmafee
+https://youtube.com/playlist?list=PLIEzhyB68OwaUiUxgP8Oni1uVfWU7w1eA&feature=shared
+
+CSE 4307 - Abu Raihan Mostofa Kamal
+https://youtube.com/playlist?list=PLIEzhyB68OwZaQdM5hcKMt_g-Mvny896B&feature=shared
+
+EEE 4383 - RAM
+https://youtube.com/playlist?list=PLIEzhyB68OwaXy_NysRMaCW5lBgqnE5MZ&feature=shared
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Linear Algebra Notes all in one (Carleton University)
+https://people.math.carleton.ca/~kcheung/math/notes/MATH1107/index.html
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+CSE 4308, Anas Jawad (Very Very Very Helpful to Understand the Lab)
+https://youtube.com/playlist?list=PLS_b72jm-bvtu-ySN2J5JPHM92wvLAOL6&feature=shared
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Other resources from YouTube that'll help to understand the concepts more
+==================================================================================
+C++ Tutorials - CodeWithHarry (for CSE 4301 - OOP)
+https://youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL&feature=shared
+
+Computer Organization & Architecture (COA) - Unacademy Computer Science
+https://youtube.com/playlist?list=PLG9aCp4uE-s3WzvFW1nI-7hHWNC8s2RdI&feature=shared
+
+Linear Algebra - For Solving Maths
+https://youtube.com/playlist?list=PLPghpoec0ciUQgzEuT_PRmtyuC2TkGNwz&feature=shared
+
+Analog Electronics | Ankit Goyal Sir (for EEE, only some videos are needed)
+https://youtube.com/playlist?list=PLs5_Rtf2P2r674CTMNJ3odeHk9Wtb-WWl&feature=shared
+
+Operational Amplifier - Very Helpful for EEE math problems
+https://youtube.com/playlist?list=PLP48XoBlOMADncExQY7Ci7Rr4EZg2SjQU&feature=shared
+
+Java Database Connectivity (JDBC) by Navin Reddy (YOU WILL DEFINITELY NEED THIS PLAYLIST)
+https://youtube.com/playlist?list=PLsyeobzWxl7rU7Jz3zDRpqB-EODzBbHOI&feature=shared
+
+MIT 18.06 Linear Algebra, Spring 2005
+https://youtube.com/playlist?list=PLE7DDD91010BC51F8&feature=shared
+
+DBMS by vishwadeep
+https://youtube.com/playlist?list=PLe6KbBrl2NHX5Xn2bwbdaTzAzkqsDS7HY&feature=shared
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

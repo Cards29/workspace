@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="JAR libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/IUT_Academics/3rd Semester/CSE_4308_DBMS_Lab/JAR libraries/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/IUT_Academics/3rd Semester/CSE_4308_DBMS_Lab/JAR libraries/mysql-connector-j-8.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/IUT_Academics/3rd Semester/CSE_4308_DBMS_Lab/JAR libraries/ojdbc6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

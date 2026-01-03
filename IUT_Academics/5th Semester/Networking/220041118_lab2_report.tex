@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{listings}
+
+% Page Margins
+\geometry{left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Pushes content down to the center vertically
+    
+    {\Huge \textbf{CSE 4512: Computer Networks Lab}\\ Lab 02 Report \par}
+    
+    \vspace{1.5cm} % Adds some space between title and author
+    
+    {\Large
+        \textbf{Name: Rahinur Bin Naushad} \\
+        Student ID: 220041118 \\
+        Section: 1(B) \par
+    }
+    
+    \vspace*{\fill} % Pushes the date to the bottom
+    
+    {\Large \today \par}
+\end{titlepage}
+
+\section{Lab Task}
+The objective of this lab is to design a network topology for "Iutians Assemble," a company expanding its headquarters across five floors. The design requires Variable Length Subnet Masking (VLSM) to efficiently allocate IP addresses based on the specific device requirements of each department.
+
+Given the Student ID \textbf{18}, the base network prefix is calculated as:
+\[ 192.(18).(18+3 \pmod{14}) \rightarrow \textbf{192.18.7.0} \]
+
+The device requirements are calculated based on the provided formulas:
+\begin{itemize}
+    \item \textbf{Engineering (Floor 1):} $E(18) = (7(18) + 3) \pmod{41} + 10 = 16$ devices.
+    \item \textbf{Marketing (Floor 2):} $M(18) = (5(18) + 11) \pmod{26} + 5 = 28$ devices.
+    \item \textbf{Sales (Floor 3):} $S(18) = (11(18) + 7) \pmod{36} + 5 = 30$ devices.
+    \item \textbf{Administration (Floor 4):} $A(18) = (3(18) + 17) \pmod{18} + 3 = 20$ devices.
+    \item \textbf{Management (Floor 5):} $G(18) = (13(18) + 1) \pmod{9} + 2 = 3$ devices.
+\end{itemize}
+
+\section{Network Topology}
+Below is the screenshot of the final network topology designed in Cisco Packet Tracer.
+
+\begin{figure}[H]
+    \centering
+    % REPLACE 'user' WITH YOUR ACTUAL USERNAME
+    \includegraphics[width=0.9\textwidth]{/home/arcane/Pictures/Screenshots/topology.png}
+    \caption{Final Network Topology for Iutians Assemble}
+    \label{fig:topology}
+\end{figure}
+
+\section{Procedure}
+
+\subsection{Step 1: VLSM Calculation}
+We sorted the departments by the number of required host addresses (descending order) to ensure the most efficient use of the IP space. The base network is \texttt{192.18.7.0}.
+
+\begin{enumerate}
+    \item \textbf{Sales (30 hosts):} Requires 32 IPs (Block size). Mask: /27.
+    \item \textbf{Marketing (28 hosts):} Requires 32 IPs. Mask: /27.
+    \item \textbf{Administration (20 hosts):} Requires 32 IPs. Mask: /27.
+    \item \textbf{Engineering (16 hosts):} Requires 32 IPs. Mask: /27.
+    \item \textbf{Management (3 hosts):} Requires 8 IPs. Mask: /29.
+\end{enumerate}
+
+\subsection{Step 2: Subnetting Worksheet Configuration}
+Using the calculations above, the subnet table was populated:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|l|}
+\hline
+\textbf{Department} & \textbf{Dev} & \textbf{Network} & \textbf{Mask} & \textbf{Usable Host Range} \\ \hline
+Sales & 30 & 192.18.7.0 & /27 & 192.18.7.1 -- 192.18.7.30 \\ \hline
+Marketing & 28 & 192.18.7.32 & /27 & 192.18.7.33 -- 192.18.7.62\\ \hline
+Administration & 20 & 192.18.7.64 & /27 & 192.18.7.65 -- 192.18.7.94 \\ \hline
+Engineering & 16 & 192.18.7.96 & /27 & 192.18.7.97 -- 192.18.7.126 \\ \hline
+Management & 3 & 192.18.7.128 & /29 & 192.18.7.129 -- 192.18.7.134 \\ \hline
+\end{tabular}
+\caption{Completed Subnetting Worksheet}
+\end{table}
+
+\subsection{Step 3: Topology Setup}
+\begin{enumerate}
+    \item Launched Cisco Packet Tracer.
+    \item Placed 1 Router (Generic) to act as the central gateway.
+    \item Placed 5 Switches, one for each department.
+    \item Connected at least one PC to each switch to represent the end devices.
+    \item Connected switches to the Router GigabitEthernet interfaces.
+\end{enumerate}
+
+\subsection{Step 4: Device Configuration}
+\begin{enumerate}
+    \item \textbf{Router Configuration:} Assigned the first usable IP of each subnet to the respective router interface (Default Gateway).
+    \begin{itemize}
+        \item Sales Gateway: 192.18.7.1
+        \item Marketing Gateway: 192.18.7.33
+        \item Admin Gateway: 192.18.7.65
+        \item Engineering Gateway: 192.18.7.97
+        \item Management Gateway: 192.18.7.129
+    \end{itemize}
+    \item \textbf{PC Configuration:} Assigned a usable IP to the PCs and set the Default Gateway to the router IP configured above. Subnet masks were set according to the  /27 or /29 CIDR values.
+\end{enumerate}
+
+\section{Observations \& Results}
+To verify the network flow, ping tests were initiated from the \textbf{Sales Department PC} to the erst of the departments.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/arcane/Pictures/Screenshots/ping_result.png}
+    \caption{Successful Ping from Sales (192.18.7.10) to Marketing (192.18.7.40)}
+    \label{fig:ping}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/arcane/Pictures/Screenshots/ping_result2.png}
+    \caption{Successful Ping from Sales (192.18.7.10) to Administration (192.18.7.70)}
+    \label{fig:ping}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/arcane/Pictures/Screenshots/ping_result3.png}
+    \caption{Successful Ping from Sales (192.18.7.10) to Engineering (192.18.7.100)}
+    \label{fig:ping}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/arcane/Pictures/Screenshots/ping_result4.png}
+    \caption{Successful Ping from Sales (192.18.7.10) to Management (192.18.7.130)}
+    \label{fig:ping}
+\end{figure}
+
+
+As seen in the screenshot, the packets were successfully transmitted and received, confirming that the routing table is correctly populated and the gateways are functioning.
+
+\section{Challenges Faced}
+\begin{itemize}
+    \item \textbf{Router RIP Setup:} I set the router to router interface ip addresses in 192.168.0.0 network, which I needed to specify in the cli when using router rip command.
+\end{itemize}
+
+\end{document}
